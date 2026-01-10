@@ -68,6 +68,55 @@
     /* Desktop */
     @apply sm:px-4 sm:text-sm;
   }
+
+  /* SandBox Input */
+  .mode-toggle-wrapper {
+    @apply absolute top-4 right-4 z-10;
+  }
+
+  .btn-mode-toggle {
+    @apply flex items-center gap-2 rounded-full font-medium transition-all cursor-pointer border backdrop-blur-sm;
+    @apply bg-slate-800/50 text-slate-300 border-slate-700;
+    @apply hover:text-white hover:border-indigo-500;
+  
+    @apply px-3 py-2 text-xs;
+
+    @apply sm:px-4 sm:text-sm;
+  }
+
+  .sandbox-wrapper {
+    @apply w-full max-w-md flex flex-col gap-2;
+    /* Mobile */
+    @apply mb-6;
+    /* Desktop */
+    @apply sm:mb-8;
+  }
+
+  .input-sandbox {
+    @apply w-full rounded-xl outline-none transition-all border backdrop-blur-sm;
+    @apply bg-slate-800/50 text-white;
+
+    /* Mobile */
+    @apply px-4 py-3 text-base;
+    /* Desktop */
+    @apply sm:text-lg;
+  }
+
+  .input-sandbox-normal {
+    @apply border-slate-700 focus:border-indigo-500;
+  }
+  .input-sandbox-error {
+    @apply border-red-500 focus:border-red-600;
+  }
+
+  .btn-sandbox-submit {
+    @apply absolute right-2 p-2 rounded-lg text-white transition-colors cursor-pointer border-none;
+    @apply bg-indigo-500 hover:bg-indigo-600;
+  }
+
+  .sandbox-error-msg {
+    @apply text-red-400 text-xs ml-2 font-medium;
+  }
 }
 
 :root {

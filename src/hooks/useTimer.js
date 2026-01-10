@@ -22,7 +22,7 @@ export const useTimer = (initialSeconds = 0) => {
 
   const reset = () => {
     setIsActive(false);
-    setTimeLeft(initialSeconds);
+    setTimeLeft(0);
   };
 
   const setTime = (seconds) => {
@@ -30,5 +30,10 @@ export const useTimer = (initialSeconds = 0) => {
     setTimeLeft(seconds);
   }
 
-  return {timeLeft, isActive, startPause, reset, setTime}
+  const addTime = (seconds) => {
+    setIsActive(false);
+    setTimeLeft((prev) => prev + seconds)
+  }
+
+  return {timeLeft, isActive, startPause, reset, setTime, addTime}
 }
