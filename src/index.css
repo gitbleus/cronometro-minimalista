@@ -1,46 +1,72 @@
 @import "tailwindcss";
 
 @layer components {
+  .app-container {
+    @apply min-h-screen flex flex-col items-center justify-center p-4;
+  }
+
+  .glass-panel {
+    @apply w-full p-6 flex flex-col items-center;
+    @apply bg-slate-800/50 rounded-3xl shadow-2xl border border-slate-700 backdrop-blur-sm;
+    @apply md:p-12 md:max-w-3xl; 
+  }
+
   .clock-display {
-    @apply text-9xl font-bold font-mono my-8 tracking-widest tabular-nums;
+    @apply font-bold font-mono my-6 tabular-nums select-none text-center;
+
+    @apply text-6xl tracking-tight; 
+    @apply sm:text-8xl sm:tracking-normal;
+    @apply lg:text-9xl lg:tracking-widest;
   }
 
+  /* Wrapper Botão (Iniciar/Resetar) */
   .controls-wrapper {
-    @apply flex gap-4 justify-center;
+    /* Mobile */
+    @apply flex flex-col gap-3 w-full;
+    
+    /* Desktop */
+    @apply sm:flex-row sm:gap-4 sm:justify-center sm:w-auto;
   }
 
+  /* Preset Botão */
   .btn-control {
-    @apply flex items-center gap-2 px-6 py-4 rounded-xl font-bold text-xl transition-all cursor-pointer border-none;
+    @apply flex items-center justify-center gap-2 py-4 rounded-xl font-bold transition-all cursor-pointer border-none;
+    
+    /* Mobile */
+    @apply w-full text-lg;
+    
+    /* Desktop */
+    @apply sm:w-auto sm:px-6 sm:text-xl;
   }
 
+  /* Botões */
   .btn-start {
-    @apply bg-emerald-500 hover:bg-emerald-600 text-slate-900 px-8;
+    @apply bg-emerald-500 hover:bg-emerald-600 text-slate-900;
+    @apply sm:px-8; /* Padding extra horizontal só no desktop */
   }
 
   .btn-pause {
-    @apply bg-red-400 hover:bg-red-500 text-slate-900 px-8
+    @apply bg-red-400 hover:bg-red-500 text-slate-900;
+    @apply sm:px-8;
   }
 
   .btn-reset {
     @apply bg-slate-700 hover:bg-slate-600 text-slate-300;
   }
 
+  /* Presets */
   .presets-wrapper {
-    @apply flex gap-2 mb-8 flex-wrap justify-center;
+    @apply flex gap-2 mb-6 flex-wrap justify-center w-full;
+    @apply sm:mb-8;
   }
 
   .btn-preset {
-    @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors border cursor-pointer;
+    @apply px-3 py-2 text-xs font-medium transition-colors border cursor-pointer rounded-lg;
     @apply bg-slate-800 text-slate-300 border-slate-700;
-    @apply hover:bg-indigo-600 hover:text-white hover:border-indigo-500
-  }
-
-  .app-container {
-    @apply min-h-screen flex flex-col items-center justify-center p-4;
-  }
-
-  .glass-panel {
-    @apply bg-slate-800/50 p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-700 backdrop-blur-sm flex flex-col items-center;
+    @apply hover:bg-indigo-400 hover:text-white hover:border-indigo-500;
+    
+    /* Desktop */
+    @apply sm:px-4 sm:text-sm;
   }
 }
 
