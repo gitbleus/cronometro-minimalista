@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer components {
+  .clock-display {
+    @apply text-9xl font-bold font-mono my-8 tracking-widest tabular-nums;
+  }
+
+  .controls-wrapper {
+    @apply flex gap-4 justify-center;
+  }
+
+  .btn-control {
+    @apply flex items-center gap-2 px-6 py-4 rounded-xl font-bold text-xl transition-all cursor-pointer border-none;
+  }
+
+  .btn-start {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-slate-900 px-8;
+  }
+
+  .btn-pause {
+    @apply bg-red-400 hover:bg-red-500 text-slate-900 px-8
+  }
+
+  .btn-reset {
+    @apply bg-slate-700 hover:bg-slate-600 text-slate-300;
+  }
+
+  .presets-wrapper {
+    @apply flex gap-2 mb-8 flex-wrap justify-center;
+  }
+
+  .btn-preset {
+    @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors border cursor-pointer;
+    @apply bg-slate-800 text-slate-300 border-slate-700;
+    @apply hover:bg-indigo-600 hover:text-white hover:border-indigo-500
+  }
+
+  .app-container {
+    @apply min-h-screen flex flex-col items-center justify-center p-4;
+  }
+
+  .glass-panel {
+    @apply bg-slate-800/50 p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-700 backdrop-blur-sm flex flex-col items-center;
+  }
+}
+
+:root {
+  background: #0f172a;
+  color: white;
+}
