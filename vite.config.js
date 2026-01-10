@@ -8,6 +8,9 @@ export default defineConfig({
     react(), 
     tailwindcss()
   ],
+  build: {
+    target: 'es2015',
+  },
   server: {
     allowedHosts: ["overdramatic-creakier-lona.ngrok-free.dev"]
   }

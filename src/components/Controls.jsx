@@ -1,4 +1,4 @@
-import { Play, Pause, RotateCcw} from "lucide-react";
+import { Play, Pause, TimerReset} from "lucide-react";
 
 export default function Controls({isActive, onStartPause, onReset}) {
   return (
@@ -14,7 +14,7 @@ export default function Controls({isActive, onStartPause, onReset}) {
         onClick={onReset}
         className="btn-control btn-reset">
 
-          <RotateCcw/> Reiniciar
+          <TimerReset/> Reiniciar
         </button>
 
     </div>
