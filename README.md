@@ -7,7 +7,7 @@
 
 <br>
 
-Um cronômetro minimalista desenvolvido para uso pessoal e gestão de tempo para estudos.
+Um cronômetro minimalista desenvolvido para uso pessoal e gestão de tempo para estudos. Acesse-o clicando ![aqui](cronometro-minimalista.netlify.app).
 
 </div>
 
