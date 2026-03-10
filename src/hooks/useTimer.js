@@ -20,7 +20,7 @@ export const useTimer = (initialSeconds = 0) => {
     return () => clearInterval(interval);
   }, [isActive, timeLeft]);
 
-  const startPause = () => setIsActive(!isActive);
+  const startPause = () => setIsActive((prev) => !prev);
 
   const reset = () => {
     setIsActive(false);

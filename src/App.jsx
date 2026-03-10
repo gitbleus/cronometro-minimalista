@@ -22,6 +22,29 @@ function App() {
     }
   }, [timeLeft, isActive]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+      }
+
+      if (event.target.tagName === 'BUTTON') {
+        return;
+      }
+
+      if (event.code === 'Space') {
+        event.preventDefault();
+        startPause();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [startPause]);
+
   return (
     <>
     <div className="mode-toggle-wrapper">
